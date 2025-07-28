@@ -1,4 +1,4 @@
-// Conditionally load dotenv only in development
+// Conditionally load dotenv only in developmen
 if (process.env.NODE_ENV !== 'production') {
   require("dotenv").config();
 }
