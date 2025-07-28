@@ -15,7 +15,7 @@ const { handleWebhook } = require("./controller/paymentController"); // Import h
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://car-rental-sys.netlify.app"],
+  origin: [process.env.LOCAL_FRONTEND_URL || "http://localhost:5173", process.env.FRONTEND_URL],
   credentials: true
 }));
 
