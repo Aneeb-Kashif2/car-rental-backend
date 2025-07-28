@@ -14,10 +14,12 @@ const { handleWebhook } = require("./controller/paymentController"); // Import h
 
 const app = express();
 
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://car-rental-sys.netlify.app"],
+    credentials: true,
+  })
+);
 
 // IMPORTANT: Define the webhook route FIRST.
 // We are NO LONGER using express.raw() here. The raw body will be read manually inside handleWebhook.
