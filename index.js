@@ -1,5 +1,7 @@
-require("dotenv").config();
-
+// Conditionally load dotenv only in development
+if (process.env.NODE_ENV !== 'production') {
+  require("dotenv").config();
+}
 const express = require("express");
 const { connectToMongoDB } = require("./connect");
 const carRoutes = require("./routes/carRoutes");
