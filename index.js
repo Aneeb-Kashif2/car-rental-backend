@@ -21,6 +21,9 @@ app.use(cors({
   credentials: true
 }));
 
+console.log("NODE_ENV:", process.env.NODE_ENV);
+console.log("LOCAL_FRONTEND_URL:", process.env.LOCAL_FRONTEND_URL);
+console.log("FRONTEND_URL:", process.env.FRONTEND_URL);
 // IMPORTANT: Define the webhook route FIRST.
 // We are NO LONGER using express.raw() here. The raw body will be read manually inside handleWebhook.
 app.post("/api/payment/webhook", handleWebhook);
