@@ -48,7 +48,7 @@ app.use("/api/admin", adminRoutes);
 app.get("/test", (req, res) => {
   res.send("everything is fine");
 });
-app.get("again-test" , (req , res ) =>{
+app.get("/again-test" , (req , res ) =>{
   res.send("everything is again fine");
 })
 connectToMongoDB(process.env.MONGO_URL)
